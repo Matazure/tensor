@@ -52,3 +52,13 @@ static_assert(std::is_same<runtime_t<_T1>, runtime_t<_T2>>::value, "the runtime 
 ```c++
 MATAZURE_ASSERT(equal(ts1.shape(), ts2.shape()), "the shapes is not matched");
 ```
+
+## 代码何如原则
+
+dev分支通过后推送到master上， master和dev是一致的， 但确保dev正确再推送， 否则回撤。
+
+定期发布release标签，
+
+若有bug则直接再master上发布
+
+如要补长期release， 则需要开辟release分支，便于稳定修复bug
