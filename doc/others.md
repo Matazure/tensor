@@ -42,15 +42,15 @@ gnu compiler向量化扩展是不支持的， 因为在cu文件里MATAZURE_GENER
 ## compile error
 
 ```c++
-static_assert(_T1::rank == _T2::rank, "the ranks is not matched");;
-static_assert(std::is_same<typename _T1::value_type, typename _T2::value_type>::value, "the value types is not matched");
-static_assert(std::is_same<runtime_t<_T1>, runtime_t<_T2>>::value, "the runtime types is not matched");
+static_assert(_T1::rank == _T2::rank, "the ranks are not matched");;
+static_assert(std::is_same<typename _T1::value_type, typename _T2::value_type>::value, "the value types are not matched");
+static_assert(std::is_same<runtime_t<_T1>, runtime_t<_T2>>::value, "the runtime types are not matched");
 ```
 
 ## runtime error
 
 ```c++
-MATAZURE_ASSERT(equal(ts1.shape(), ts2.shape()), "the shapes is not matched");
+MATAZURE_ASSERT(equal(ts1.shape(), ts2.shape()), "the shapes are not matched");
 ```
 
 ## 代码何如原则

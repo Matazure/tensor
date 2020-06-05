@@ -136,7 +136,7 @@ inline auto conv(_Tensor ts, _Kernel kernel) -> decltype(make_lambda(
     ts.shape(), conv_functor<_Tensor, _Kernel, is_local_tensor<_Kernel>::value>(ts, kernel),
     runtime_t<_Tensor>{}, layout_t<_Tensor>{})) {
     static_assert(is_same<typename _Tensor::value_type, typename _Kernel::value_type>::value,
-                  "the value types is not matched");
+                  "the value types are not matched");
     return make_lambda(ts.shape(),
                        conv_functor<_Tensor, _Kernel, is_local_tensor<_Kernel>::value>(ts, kernel),
                        runtime_t<_Tensor>{}, layout_t<_Tensor>{});

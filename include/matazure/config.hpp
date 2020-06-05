@@ -121,15 +121,15 @@ struct blank_t {};
 
 // for assert
 #define MATAZURE_STATIC_ASSERT_DIM_MATCHED(T1, T2) \
-    static_assert(T1::rank == T2::rank, "the rank is not matched")
+    static_assert(T1::rank == T2::rank, "the rank are not matched")
 
 #define MATAZURE_STATIC_ASSERT_VALUE_TYPE_MATCHED(T1, T2)                                \
     static_assert(std::is_same<typename T1::value_type, typename T2::value_type>::value, \
-                  "the value type is not matched")
+                  "the value type are not matched")
 
 #define MATAZURE_STATIC_ASSERT_MEMORY_TYPE_MATCHED(T1, T2)           \
     static_assert(std::is_same<runtime_t<T1>, runtime_t<T2>>::value, \
-                  "the memory type is not matched")
+                  "the memory type are not matched")
 
 #define MATAZURE_STATIC_ASSERT_MATRIX_RANK(T) \
     static_assert(T::rank == 2, "the matrix rank should be 2")
