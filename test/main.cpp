@@ -1,4 +1,5 @@
 ﻿#include "ut_foundation.hpp"
+#include "ut_lambda_tensor.hpp"
 #include "ut_tensor.hpp"
 
 int main(int argc, char* argv[]) {
